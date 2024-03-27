@@ -1,21 +1,27 @@
-import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import LoginBox from './component/LoginBox';
+import CountBox from './component/CountBox';
+// import Box from './component/Box';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const increase = () => {
-    setCount(count + 1);
-  };
-
   return (
-    <div className='area'>
-      <div className='wrapper'>
-        <div className='number'>{count}</div>
-        <button className='btn-push' onClick={increase}>
+    <div>
+      <div className='title'>숫자 카운터</div>
+      <LoginBox />
+      <CountBox />
+
+      {/* <div>
+        <h1>
+          {id},{password}
+        </h1>
+        <div>{count}</div>
+        <button onClick={increase}>
           증가
         </button>
-      </div>
+        <button onClick={login}>로그인</button>
+        <Box />
+      </div> */}
     </div>
   );
 }
